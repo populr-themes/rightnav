@@ -1,0 +1,242 @@
+@import 'preboot';
+@import '//fonts.googleapis.com/css?family=PT+Sans&.css';
+@import 'variables';
+
+#reset > .global-reset();
+
+.headline-font() {
+  font-family: @headline-font-family;
+  font-weight: @headline-font-weight;
+}
+
+#pop {
+  padding-top: 20px;
+  text-align: center;
+}
+
+#main-content {
+  margin: 0 auto;
+  text-align: left;
+  width: 940px;
+  padding: 0;
+  overflow: hidden;
+}
+
+#main-region {
+  clear: both;
+  float: right;
+  width: 450px;
+}
+
+#main-region .asset-container {
+  margin-bottom: 20px;
+}
+
+.asset {
+  text-align: left;
+}
+
+.asset-inner {
+  padding: 15px;
+}
+
+.asset-size-m {
+  width: 450px;
+}
+
+.asset .description, .asset .content, .asset .description p, .asset .content p, .asset .content ul, .asset .content ol, .asset .content li, .asset .description ul, .asset .description ol, .asset .description li {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: @baseline;
+  color: @text-color;
+}
+
+.asset .description {
+  /* Note: because this theme is one column, we don't run fixBaselines and this is hardcoded. */
+  margin-top: @baseline / 2;
+}
+
+.asset-type-text .content, .asset .description {
+  ul, ol {
+    margin: (@baseline / 2) 0 (@baseline / 2) 1em;
+  }
+  ul li {
+    list-style-type: disc;  
+  }
+  ol li {
+    list-style-type: decimal;
+  }
+}
+
+i, em {
+  font-style: italic;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+#pop-title, .asset h2 {
+  .headline-font();
+  line-height: @baseline * 2;
+  color: @text-color;
+}
+
+.asset h2 {
+  padding-left: 35px;
+  font-size: 28px;
+  line-height: @baseline * 1.5;
+  margin-bottom: @baseline / 3;
+}
+
+#pop-title {
+  float: right;
+  width: 450px;
+  padding: 15px;
+  margin-bottom: 10px;
+  font-size: 45px;
+  line-height: 48px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.asset-type-text h2 {
+  background-position: 0 2px;
+}
+
+.asset-type-documentgroup h2 {
+  background-position: -700px 2px;
+}
+
+.asset-type-videogroup h2 {
+  background-position: -1400px 2px;
+}
+
+.asset-type-imagegroup h2 {
+  background-position: -2100px 2px;
+}
+
+.asset-size-m .content video {
+  width: 420px;
+  height: 304px;
+}
+
+.asset-type-videogroup .video-js {
+  margin-bottom: 15px;
+}
+
+.asset-type-videogroup .playlist {
+  margin: 10px 0 0 -10px;
+  padding: 0;
+  list-style: none;
+}
+
+.asset-type-videogroup .playlist li {
+  list-style: none;
+  float: left;
+  margin-left: 10px;
+}
+
+.nivoSlider {
+  position: relative;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -o-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  a {
+    border: 0;
+    display: block;
+  }
+}
+
+.image-slideshow {
+  .clearfix();
+  margin-bottom: 0;
+  img {
+    float: left;
+  }
+}
+
+.asset-type-videogroup video {
+  display: block;
+}
+
+.asset-type-videogroup .mejs-container video {
+  margin-left: 0;
+}
+
+.truncate {
+  height: 310px;
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+
+.show-overflow-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f3f2f2;
+  color: @accent-color;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px 0;
+  z-index: 100;
+  cursor: pointer;
+}
+
+#slide-nav {
+  position: fixed;
+  top: 150px;
+  left: 50%;
+  text-align: left;
+  list-style: none;
+  margin: 0 0 0 -470px;
+  padding: 0;
+  li {
+    list-style: none;
+    margin-bottom: 10px;
+    .transition(margin 0.4s);
+    &:hover {
+      margin-left: -10px;
+    }
+    a {
+      .headline-font();
+      .transition(color 0.4s);
+      font-size: 25px;
+      padding: 10px;
+      display: inline-block;
+      text-decoration: none;
+      width: 300px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/* new clearfix */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */

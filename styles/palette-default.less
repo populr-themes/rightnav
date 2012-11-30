@@ -1,0 +1,21 @@
+@text-color: #fff;
+
+body {
+  background: #4a4a4a url("@{base-url}/images/dark_squares.png") repeat top left;
+}
+
+#main-region, #pop-title, #slide-nav li {
+  background: transparent url("@{base-url}/images/region-bg.png") repeat top left;
+}
+
+.asset h2 {
+  background: transparent url("@{base-url}/images/sprites.png") no-repeat 0 2px;
+}
+
+#pop a, #slide-nav a {
+  color: hsl(hue(@background-color), 60%, 80%);
+}
+
+#slide-nav a:hover {
+  color: @text-color;
+}

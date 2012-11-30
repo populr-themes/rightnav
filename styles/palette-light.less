@@ -1,0 +1,21 @@
+@text-color: #343434;
+
+body {
+  background: #ccc url("@{base-url}/images/bright_squares.png") repeat top left;
+}
+
+#main-region, #pop-title, #slide-nav li {
+  background: transparent url("@{base-url}/images/region-bg-light.png") repeat top left;
+}
+
+.asset h2 {
+  background: transparent url("@{base-url}/images/sprites-light.png") no-repeat 0 2px;
+}
+
+#pop a, #slide-nav a {
+  color: hsl(hue(@background-color), 70%, 30%);
+}
+
+#slide-nav a:hover {
+  color: @text-color;
+}
